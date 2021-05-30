@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.pythonPath": "C:\\Users\\biswa\\.virtualenvs\\tweetme2-q1NeTfoL\\Scripts\\python.exe"
+	}
 }
