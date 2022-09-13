@@ -60,7 +60,7 @@ def tweet_delete_view(request, tweet_id, *args, **kwargs):
     obj.delete()
     return Response({"message": "Tweet Removed"}, status=200)
 
-@api_view(['DELETE', 'POST'])
+@api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def tweet_action_view(request, *args, **kwargs):
     '''
