@@ -4,14 +4,14 @@ import { apiTweetCreate } from './lookup'
 export function TweetCreate(props){
   const textAreaRef = React.createRef()
   const {didTweet} = props
-  const handleBackendUpdate = (response, status) => {
-    if (status === 201){
-      didTweet(response)
-    } else{
-      console.log(response)
-      alert("An error occured please try again")
+    const handleBackendUpdate = (response, status) => {
+      if (status === 201){
+        didTweet(response)
+      } else{
+        console.log(response)
+        alert("An error occured please try again")
+      }
     }
-  }
 
   const handleSubmit = (event) => {
     event.preventDefault()
