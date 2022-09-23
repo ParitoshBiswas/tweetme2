@@ -59,5 +59,5 @@ def user_follow_view(request, username, *args, **kwargs):
         profile.followers.remove(me)
     else:
         pass
-    currentfollowers_qs = profile.followers.all()
-    return Response({"count": currentfollowers_qs.count()}, status=200)
+    data = PublicProfileSerializer(instance=profile, context={"request": request})
+    return Response(data.data, status=200)
